@@ -1,0 +1,19 @@
+<p>Hey, My name is {{employeeName}}</p>
+
+<img [src]="imageurl">
+
+<button (click)="btnClick()">Change Employee Name</button>
+
+<input type="text" placeholder="Employee Name" [(ngModel)]="employeeName">
+
+<div *ngFor="let emp of employees">{{emp.Name}} has Exp {{emp.Exp}}</div>
+
+<div *ngIf="employees.length==3">ng-if{{employees.length}} </div>
+<br/>
+<hr/>
+
+<div [ngSwitch]="employees.length" >
+<div *ngSwitchCase="'1'">Matched case 1 </div>
+<div *ngSwitchCase="'2'">Matched Case 2  </div>
+<div *ngSwitchCase="'3'">Matched Case 3  </div>
+</div>
