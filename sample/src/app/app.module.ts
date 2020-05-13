@@ -8,13 +8,17 @@ import { EmployeeComponent } from './employee/employee.component';
 import {FormsModule} from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent  } from './child/child.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    DashboardComponent
+    DashboardComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
