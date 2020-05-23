@@ -10,7 +10,7 @@ import { CountryModel } from '../CountryModel';
 })
 export class BabyComponent implements OnInit {
  
-  @Input() country : any[]
+  @Input() country : any = []
   constructor() { }
 
   ngOnInit()

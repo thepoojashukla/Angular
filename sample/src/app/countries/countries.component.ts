@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CovidService } from '../service/covid.service';
 
@@ -23,7 +23,7 @@ export class CountriesComponent implements OnInit {
       res},err=>{console.log(err)});
 
     //this.countries = this.covidSummary.Countries;
-    console.log(this.allCountries);     
+    //console.log(this.allCountries);     
   }
   ngOnDestroy()
    {
