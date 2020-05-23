@@ -10,6 +10,9 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent  } from './child/child.component';
+import { BabyComponent } from './baby/baby.component';
+import { CountriesComponent } from './countries/countries.component';
+
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { ChildComponent  } from './child/child.component';
     EmployeeComponent,
     DashboardComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    BabyComponent,
+    CountriesComponent,
+   
   ],
   imports: [
     BrowserModule,

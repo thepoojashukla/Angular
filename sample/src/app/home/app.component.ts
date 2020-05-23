@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../service/employee.service';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,6 +10,7 @@ import { EmployeeService } from '../service/employee.service';
   providers:[EmployeeService]
 })
 export class AppComponent implements OnInit {
+  
 
   constructor() { }
 
@@ -15,5 +18,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
  
   }
+
+  /* onClick() : void{
+    const dashboardUrl : URL = /localhost:3736/dashboard;
+  } */
 
 }

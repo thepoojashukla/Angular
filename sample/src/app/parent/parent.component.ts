@@ -15,6 +15,9 @@ export class ParentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeChildInput(){
+    this.user={UserName:'Pooja',UserAddress:'abc',UserPh:'12345345634'};
+  }
 
   eventfromChild(abc:UserDetails){
     alert(abc);

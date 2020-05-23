@@ -1,5 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter,SimpleChange,SimpleChanges } from '@angular/core';
 import {UserDetails} from '../Models/UserDetails'
+import {Router} from '@angular/router';
+
 
 
 
@@ -10,10 +12,15 @@ import {UserDetails} from '../Models/UserDetails'
 })
 export class ChildComponent implements OnInit {
 
-  constructor() { }
-
-  @Input('userDetails1') userDetails:UserDetails;
-  @Output('datafromchild1') datafromchild= new EventEmitter();
+  constructor(private router:Router) { }
+ demotemplatevar : string ="from Child Component"
+  @Input('userDetails1') userDetails:UserDetails;                  //pass object from one parentcomponent(@input is written) to child
+  @Output('datafromchild1') datafromchild= new EventEmitter(); //passing data FROM CHILD TO PARENT through event using Emitter event and in html use $ EVENT
+  
+ 
+  ngOnChanges(changes:SimpleChanges){
+    console.log(changes);
+   }
 
   ngOnInit(): void {
 
@@ -21,6 +28,7 @@ export class ChildComponent implements OnInit {
 
   childClick()
   {
+    this.router.navigate(['dashboard']);
     this.datafromchild.emit("Hey, Child here");
   }
 }

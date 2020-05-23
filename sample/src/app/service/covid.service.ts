@@ -12,7 +12,7 @@ export class CovidService {
 
   public getCovidSummary():Observable<any>
   {
-   return this.httpclient.get("http://democoreapi.azurewebsites.net/covid/summary");//https://api.covid19api.com/summary");
+   return this.httpclient.get("https://api.covid19api.com/summary");//");
   
   }
 }

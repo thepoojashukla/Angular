@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 @Component({
@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() { 
+  }
+  
+  @Input() datatoemployee:string;
   employeeName:string='abc';
   imageurl:string="assets/image/angular.jpg";
 

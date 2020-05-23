@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CovidService } from '../service/covid.service';
+import { Observable, Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-dashboard',
